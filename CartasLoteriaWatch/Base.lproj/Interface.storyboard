@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CartasLoteriaWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="center" id="TpR-2c-GN4">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="Lotería" textAlignment="left" id="mEJ-Ez-OyJ">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                </label>
+                                <button height="1" heightAdjustment="1" alignment="right" verticalAlignment="center" hidden="YES" title="Reset" id="cCs-jS-xlw">
+                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                    <connections>
+                                        <action selector="resetButtonOnClick" destination="AgC-eL-Hgc" id="79S-VW-jjt"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="0.69999999999999996" heightAdjustment="5" alignment="center" verticalAlignment="center" contentMode="center" layout="overlap" id="buq-BF-FBd">
+                            <items>
+                                <label width="27" height="30" alignment="right" hidden="YES" text="0" textAlignment="right" id="ULu-jh-Nja"/>
+                                <imageView width="1" height="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="9OF-HE-hed">
+                                    <gestureRecognizers>
+                                        <swipeGestureRecognizer direction="2" id="SjV-GT-neW" userLabel="Next Swipe Gesture Recognizer">
+                                            <connections>
+                                                <action selector="nextSwipeGesture:" destination="AgC-eL-Hgc" id="Eg8-ri-G14"/>
+                                            </connections>
+                                        </swipeGestureRecognizer>
+                                        <swipeGestureRecognizer id="p5c-1G-FDL" userLabel="Previous Swipe Gesture Recognizer">
+                                            <connections>
+                                                <action selector="previousSwipeGesture:" destination="AgC-eL-Hgc" id="TSJ-qD-ojE"/>
+                                            </connections>
+                                        </swipeGestureRecognizer>
+                                    </gestureRecognizers>
+                                </imageView>
+                                <label alignment="center" verticalAlignment="bottom" hidden="YES" text="Label" textAlignment="center" id="2i8-9m-tr6" userLabel="CardNameLabel">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" verticalAlignment="bottom" layout="overlap" id="gg6-8Q-Nzq">
+                            <items>
+                                <group width="1" alignment="center" verticalAlignment="center" hidden="YES" id="jGf-k8-Zk2">
+                                    <items>
+                                        <label alignment="left" verticalAlignment="center" text="Last:" textAlignment="left" id="IBb-OX-4mq"/>
+                                        <label alignment="left" verticalAlignment="center" text="0" textAlignment="left" id="WNX-zM-dWs"/>
+                                        <label alignment="right" verticalAlignment="center" text="0" textAlignment="right" id="yfM-bT-oi3"/>
+                                        <label alignment="right" verticalAlignment="center" text="/" textAlignment="right" id="1Zw-UP-eef"/>
+                                        <label alignment="right" verticalAlignment="center" text="0" textAlignment="right" id="pX3-et-7Nu"/>
+                                    </items>
+                                </group>
+                                <label width="1" alignment="center" verticalAlignment="center" text="Swipe to Start" textAlignment="center" id="cUh-mW-B8N"/>
+                            </items>
+                        </group>
+                        <label width="1" alignment="center" verticalAlignment="bottom" alpha="0.55000000000000004" text="Created and Designed by Gonzalo López &amp; Cecilia Figueroa UANL 2020" textAlignment="center" numberOfLines="0" id="3g4-IR-BC1">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="bottomGroup" destination="jGf-k8-Zk2" id="b8m-nr-VJO"/>
+                        <outlet property="cardImage" destination="9OF-HE-hed" id="irz-HF-D0M"/>
+                        <outlet property="cardNameLabel" destination="2i8-9m-tr6" id="KdP-Ss-aJi"/>
+                        <outlet property="counterCardLabel" destination="yfM-bT-oi3" id="TVP-Yd-STG"/>
+                        <outlet property="creditsLabel" destination="3g4-IR-BC1" id="Qhf-jH-0Ag"/>
+                        <outlet property="instructionsLabel" destination="cUh-mW-B8N" id="CFG-cJ-vfX"/>
+                        <outlet property="lastCardNumLabel" destination="WNX-zM-dWs" id="iVp-cR-gDQ"/>
+                        <outlet property="numCardLabel" destination="ULu-jh-Nja" id="CcO-vW-Xyd"/>
+                        <outlet property="resetButton" destination="cCs-jS-xlw" id="bjI-xb-qgo"/>
+                        <outlet property="totalCardsLabel" destination="pX3-et-7Nu" id="d7f-Nr-3Np"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="44" y="104"/>
+        </scene>
+    </scenes>
+</document>
